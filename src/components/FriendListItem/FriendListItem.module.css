@@ -1,0 +1,29 @@
+.friendCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 10px;
+  box-shadow: 2px 3px 14px 2px rgba(0, 0, 0, 0.41);
+  min-width: 100px;
+}
+
+/* .friendAvatar {
+  width: 100px;
+} */
+
+.friendName {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.isOnline {
+  color: #2ecc71;
+}
+
+.isOffline {
+  color: #e74c3c;
+}
