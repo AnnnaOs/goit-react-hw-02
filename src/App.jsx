@@ -6,12 +6,14 @@ import Options from './components/Options/Options';
 import Notification from './components/Notification/Notification';
 
 const App = () => {
-  const [feedback, setFeedback] = useState(() => {
-    const savedFeedback = localStorage.getItem('feedback');
-    return savedFeedback
-      ? JSON.parse(savedFeedback)
-      : { good: 0, neutral: 0, bad: 0 };
-  });
+  const [feedback, setFeedback] = useState(
+    () =>
+      JSON.parse(localStorage.getItem('feedback')) ?? {
+        good: 0,
+        neutral: 0,
+        bad: 0,
+      }
+  );
 
   useEffect(() => {
     localStorage.setItem('feedback', JSON.stringify(feedback));
